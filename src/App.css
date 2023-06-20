@@ -1,0 +1,40 @@
+/* Variables de colores */
+:root {
+  --color-principal: #333;
+  --color-secundario: #555;
+  --color-terciario: #d97e4ac8;
+  --color-fondo: #f4f4f4;
+  --color-texto: #fff;
+  --color-enlace-hover: #555;
+  --color-borde-tabla: #ccc;
+}
+
+/* Reset básico para normalizar los estilos en diferentes navegadores */
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.button {
+  display: inline-block;
+  font-size: 16px;
+  padding: 10px 20px;
+  margin: 10px 2px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+.button:hover {background-color: #3e8e41}
+
+.button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
