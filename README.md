@@ -88,6 +88,11 @@ Para ejecutar este proyecto en tu entorno local, sigue estos pasos:
    ```
 
    Esto iniciará el servidor de desarrollo y abrirá la aplicación en tu navegador predeterminado.
+4. **Ejemplo**
+
+![pantalla inicio](./docs/example.png)
+![pantalla next 1](./docs/next1.png)
+![pantalla next 2](./docs/next2.png)
 
 ## Contribuir
 
