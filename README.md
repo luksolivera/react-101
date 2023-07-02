@@ -1,5 +1,5 @@
 # React-101
-
+ 
 Este repositorio contiene un ejemplo de aplicación React que muestra una lista de Pokémon utilizando la API de Pokémon.
 
 ## Componente Principal (Main)
