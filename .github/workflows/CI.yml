@@ -1,0 +1,44 @@
+name: CI
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    types: [opened, synchronize, reopened]
+    branches:
+      - main
+permissions: read-all
+
+jobs:
+  build:
+    name: build
+    runs-on: ubuntu-latest
+    env:
+      CI: false
+    steps:
+    - name: Set up Node.js ⚙️
+      uses: actions/setup-node@v2
+      with:
+        node-version: '18.x'
+    - name: Install dependency
+      run: yarn install --frozen-lockfile
+    - name: Build 
+      run: yarn build
+
+  sonarcloud:
+    name: SonarCloud
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0  
+      - name: SonarCloud Scan
+        uses: SonarSource/sonarcloud-github-action@master
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+        with:
+          -Dsonar.projectKey: luksolivera_react-101
+        
+          
