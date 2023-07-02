@@ -45,6 +45,7 @@ jobs:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         with:
           args: >
+          -Dsonar.host.url: https://sonarcloud.io
           -Dsonar.organization: luksolivera
           -Dsonar.projectKey: luksolivera_react-101
           
