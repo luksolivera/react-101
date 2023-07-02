@@ -29,7 +29,6 @@ jobs:
       env:
         CI: false
       run: yarn build
-
   sonarcloud:
     name: SonarCloud
     needs: build
@@ -46,10 +45,10 @@ jobs:
         with:
           projectBaseDir: /
           args: >
-          -Dsonar.host.url: https://sonarcloud.io
-          -Dsonar.organization: luksolivera
-          -Dsonar.projectKey: luksolivera_react-101
-          
+            -Dsonar.host.url=https://sonarcloud.io
+            -Dsonar.organization=luksolivera
+            -Dsonar.projectKey=luksolivera_react-101
+
   deploy:
     if: github.event_name == 'push' || (github.event_name == 'pull_request' && github.event.action != 'closed')
     runs-on: ubuntu-latest
